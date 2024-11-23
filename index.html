@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customizable Digital Clock</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="clock-container">
+      <div id="clock" class="clock"></div>
+    </div>
+  </div>
+
+  <!-- Mode Toggle -->
+  <div id="mode-toggle" class="mode-toggle">
+    <button id="clock-mode" onclick="switchMode('clock')">Clock Mode</button>
+    <button id="stopwatch-mode" onclick="switchMode('stopwatch')">Stopwatch Mode</button>
+  </div>
+
+  <!-- Settings Icon -->
+  <div id="settings-icon" class="settings-icon" onclick="toggleSettings()">
+    <span class="material-icons">settings</span>
+  </div>
+
+  <!-- Settings Menu -->
+  <div id="settings" class="settings">
+    <h2>Settings</h2>
+
+    <div class="setting">
+      <label for="timeFormat">Time Format</label>
+      <div class="icon-and-select">
+        <span class="material-icons">access_time</span>
+        <select id="timeFormat" onchange="updateClock()">
+          <option value="12">12-Hour</option>
+          <option value="24">24-Hour</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="setting">
+      <label for="theme">Theme</label>
+      <div class="icon-and-select">
+        <span class="material-icons">palette</span>
+        <select id="theme" onchange="updateClock()">
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="setting">
+      <label for="fontSize">Font Size</label>
+      <div class="icon-and-range">
+        <span class="material-icons">text_fields</span>
+        <input type="range" id="fontSize" min="20" max="100" value="40" onchange="updateClock()" />
+      </div>
+    </div>
+
+    <div class="setting">
+      <label for="fontFamily">Font</label>
+      <div class="icon-and-select">
+        <span class="material-icons">font_download</span>
+        <select id="fontFamily" onchange="updateClock()">
+          <option value="Courier New">Courier New</option>
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Ubuntu" selected>Ubuntu</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="setting">
+      <label for="bgImage">Background Image URL</label>
+      <div class="icon-and-text">
+        <span class="material-icons">image</span>
+        <input type="text" id="bgImage" placeholder="Enter image URL" onchange="updateClock()" />
+      </div>
+    </div>
+
+    <div class="setting">
+      <label for="showSeconds">Show Seconds</label>
+      <div class="icon-and-checkbox">
+        <span class="material-icons">timer</span>
+        <input type="checkbox" id="showSeconds" onchange="updateClock()" checked />
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

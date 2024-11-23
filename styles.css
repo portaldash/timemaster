@@ -1,0 +1,129 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .clock-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock {
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 20px;
+    transition: font-size 0.3s ease;
+  }
+  
+  /* Settings Menu */
+  .settings {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 30px;
+    overflow-y: auto;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .settings h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  /* Styling each setting */
+  .setting {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .setting label {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .icon-and-select,
+  .icon-and-range,
+  .icon-and-text,
+  .icon-and-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .material-icons {
+    font-size: 22px;
+  }
+  
+  select,
+  input[type="range"],
+  input[type="text"],
+  input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="range"] {
+    width: calc(100% - 16px);
+  }
+  
+  input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  
+  /* Settings Icon */
+  .settings-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .settings-icon:hover {
+    color: #ff6347;
+  }
+  
+  /* Themes */
+  .dark {
+    background-color: #333;
+    color: white;
+  }
+  
+  .light {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  

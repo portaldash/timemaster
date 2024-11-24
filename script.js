@@ -45,10 +45,15 @@ function padZero(number) {
 
 // Toggle settings visibility
 function toggleSettings() {
-  const settings = document.getElementById('settings');
-  settingsOpen = !settingsOpen; // Toggle the state
-  settings.style.display = settingsOpen ? "block" : "none";
-}
+    const settings = document.getElementById('settings');
+    settingsOpen = !settingsOpen; // Toggle the state
+    if (settingsOpen) {
+      settings.classList.add('show');
+    } else {
+      settings.classList.remove('show');
+    }
+  }
+  
 
 // Update settings based on user input
 document.getElementById('timeFormat').addEventListener('change', (e) => {

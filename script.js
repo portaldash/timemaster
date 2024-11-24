@@ -1,5 +1,5 @@
 let timeFormat = "12";  // Default 12-hour format
-let theme = "dark";  // Default theme
+let theme = "fullydark";  // Default theme
 let fontSize = 40;  // Default font size
 let fontFamily = "Ubuntu";  // Default font family
 let bgImage = "";  // Default background image (none)
